@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f6f2">
+    <title>Wordly — Your pocket dictionary</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Wordly home">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span>wordly</span>
+      </a>
+      <span class="header-note">A little more curious, every day.</span>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> YOUR EVERYDAY DICTIONARY</p>
+        <h1 id="page-title">Find the words<br>for <em>what you mean.</em></h1>
+        <p class="intro-copy">Discover definitions, hear pronunciations, and find your next favorite word.</p>
+
+        <form class="search-form" id="search-form" role="search">
+          <label class="visually-hidden" for="word-input">Search for an English word</label>
+          <span class="search-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+          </span>
+          <input id="word-input" name="word" type="search" placeholder="Try a word, like “serendipity”" autocomplete="off" required>
+          <button class="search-button" type="submit">
+            <span>Search</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10 5l5 5-5 5"></path></svg>
+          </button>
+        </form>
+
+        <p class="search-hint">Press <kbd>Enter</kbd> to search</p>
+        <p class="status-message" id="status-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <section class="results-section" id="results-section" aria-label="Dictionary results" aria-live="polite" hidden>
+        <article class="result-card" id="result-card"></article>
+      </section>
+
+      <section class="favorites-section" aria-labelledby="favorites-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+            <h2 id="favorites-title">Saved words <span class="saved-count" id="saved-count">0</span></h2>
+          </div>
+          <span class="favorites-note">A lovely little list to come back to.</span>
+        </div>
+        <ul class="favorites-list" id="favorites-list"></ul>
+        <p class="empty-favorites" id="empty-favorites">Words you save will find a home here.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Made for the love of language.</span>
+      <span>Definitions via <a href="https://dictionaryapi.dev/" target="_blank" rel="noopener noreferrer">Free Dictionary API</a></span>
+    </footer>
+  </body>
+</html>
